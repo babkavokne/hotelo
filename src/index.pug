@@ -6,22 +6,25 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Document
     link(rel="stylesheet" href="./styles/styles.css")
+    link(rel="stylesheet" href="./styles/normalize.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap" rel="stylesheet")
   body 
     header.header
       .container-wrapper
         .header__content
-          a(href="#").logo.header__logo
+          a(href="#").header__logo.logo
             img(src="./images/logo.svg" alt="Icon: logo" srcset="")
             | Hotelo
           .header__panel
-            nav.header__nav
+            nav.header__nav.nav
               a(href="#").nav__link Booking
               a(href="#").nav__link Facilities
               a(href="#").nav__link About Us
               a(href="#").nav__link Location
               a(href="#").nav__link Contact
             .header__menu
-              .header__button
-              .header__sign-in Sign in`
-                a asdokaspdok 
-
+              .button__wrapper
+                .header__button.button
+              button.header__sign-in Sign in

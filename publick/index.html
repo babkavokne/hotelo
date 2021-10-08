@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
   </head>
   <body> 
     <header class="header">
       <div class="container-wrapper">
-        <div class="header__content"><a class="logo header__logo" href="#"><img src="./images/logo.svg" alt="Icon: logo" srcset="">Hotelo</a>
+        <div class="header__content"><a class="header__logo logo" href="#"><img src="./images/logo.svg" alt="Icon: logo" srcset="">Hotelo</a>
           <div class="header__panel">
-            <nav class="header__nav"><a class="nav__link" href="#">Booking</a><a class="nav__link" href="#">Facilities</a><a class="nav__link" href="#">About Us</a><a class="nav__link" href="#">Location</a><a class="nav__link" href="#">Contact</a></nav>
+            <nav class="header__nav nav"><a class="nav__link" href="#">Booking</a><a class="nav__link" href="#">Facilities</a><a class="nav__link" href="#">About Us</a><a class="nav__link" href="#">Location</a><a class="nav__link" href="#">Contact</a></nav>
             <div class="header__menu">
-              <div class="header__button"></div>
-              <div class="header__sign-in">Sign in</div>
+              <div class="button__wrapper">
+                <div class="header__button button"></div>
+              </div>
+              <button class="header__sign-in">Sign in</button>
             </div>
           </div>
         </div>
