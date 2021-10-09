@@ -111,7 +111,6 @@ body
     border-radius: 8px
     padding: 0px 0 0px 54px
     background: #FAFAFA
-    background-image: url('../icons/calendar.svg')
     background-repeat: no-repeat
     background-position: 20px 16px
 .search
@@ -122,6 +121,12 @@ body
   &__top-line
     justify-content: space-between
     margin-bottom: 40px
+#date
+  background-image: url('../icons/calendar.svg')
+#guests
+  background-image: url('../icons/person.svg')
+#geolocation
+  background-image: url('../icons/pin.svg')
 #date, #guests
   width: 164px
 #geolocation
@@ -192,14 +197,55 @@ body
     width: 40%
   #geolocation
     width: 100%
-
+@media (max-width: 630px)
+  .main
+    margin-top: 20px
+  .header
+    &__nav
+      max-width: 300px
+  .search
+    &__top-line
+      flex-wrap: wrap
+      margin: 0
+  #date, #guests
+    width: 100%
+    margin-bottom: 20px
 @media ( max-width: 535px )
   .header
     &__nav
       display: none
 @media ( max-width: 320px )
+  .main
+    margin-top: 10px
   .header
     &__content
       align-items: flex-end
     &__sign-in
       display: none
+  .find-hotel
+    &__top-line
+      flex-wrap: wrap
+      justify-content: center
+    &__content
+      max-width: 100%
+      text-align: center
+    &__title
+      line-height: 40px
+      font-size: 30px 
+    &__title, &__text
+      margin: 0 0 5px 0
+    &__text
+      font-size: 14px
+      line-height: 24px
+    &__search
+      padding: 20px 10px
+  .search
+    &__bottom-line
+      display: flex
+      flex-wrap: wrap
+  #geolocation
+    width: 100%
+    margin-bottom: 20px
+  #submit
+    width: 100%
+    position: relative
