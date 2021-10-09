@@ -28,3 +28,18 @@ html(lang="en")
               .button__wrapper
                 .header__button.button
               button.header__sign-in Sign in
+    main.main 
+      .container-wrapper
+        section.find-hotel
+          .find-hotel__top-line
+            .find-hotel__content
+              h1.find-hotel__title Find Your Best Hotel for Deals
+              p.find-hotel__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            form(action="").find-hotel__search.search
+              .search__top-line
+                input(type="text" placeholder="Jun 10 - 14").find-hotel__input#date
+                input(type="text" placeholder="2 Guests").find-hotel__input#guests
+              .search__bottom-line
+                input(type="text" placeholder="United States").find-hotel__input#geolocation
+                button(type="submit").find-hotel__submit#submit
+                  img(src="icons/search.svg" alt="")
