@@ -181,16 +181,87 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
   grid-gap: 16px;
 }
 .gallery__image {
   border-radius: 16px;
-  max-width: 100%;
 }
 .gallery__image._main {
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+.facilities {
+  margin-top: 120px;
+}
+.facilities__header {
+  color: #000;
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0 0 16px 0;
+}
+.facilities__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.facilities__text {
+  max-width: 605px;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0;
+}
+.facilities__button {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  position: relative;
+  white-space: nowrap;
+}
+.facilities__button::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border: 1px solid #F9D15C;
+  border-radius: 280px;
+}
+.facilities__button:hover::after {
+  background-color: #F9D15C;
+}
+.facilities__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.facilities__item {
+  max-width: 308px;
+  padding: 37px 15px 49px;
+  display: flex;
+  flex: 1fr 1fr 25%;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.facilities__img {
+  margin-bottom: 42px;
+}
+.facilities__card-header {
+  font-size: 20px;
+  line-height: 28px;
+  color: #222;
+  margin: 0 0 12px 0;
+}
+.facilities__card-text {
+  max-width: 278px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
 }
 
 @media (max-width: 1299px) {
@@ -206,24 +277,15 @@ body {
     grid-column-end: 3;
     grid-row-end: 2;
   }
-}
-@media (max-width: 820px) {
-  .container-wrapper {
-    padding: 5px 15px;
-  }
 
-  .nav__link::after {
-    bottom: 1px;
+  .facilities {
+    margin-top: 60px;
   }
-
-  .header__panel {
-    column-gap: 40px;
+  .facilities__wrapper {
+    margin-bottom: 20px;
   }
-  .header__nav {
-    column-gap: 20px;
-    flex-flow: row wrap;
-    line-height: 25px;
-    justify-content: center;
+  .facilities__item {
+    flex: 0 0 50%;
   }
 }
 @media (max-width: 1024px) {
@@ -247,6 +309,13 @@ body {
   }
   .find-hotel__title {
     font-size: 36px;
+  }
+
+  .facilities__text {
+    max-width: 500px;
+  }
+  .facilities__cards {
+    justify-content: center;
   }
 }
 @media (max-width: 820px) {
@@ -283,6 +352,31 @@ body {
   #geolocation {
     width: 100%;
   }
+
+  .container-wrapper {
+    padding: 5px 15px;
+  }
+
+  .nav__link::after {
+    bottom: 1px;
+  }
+
+  .header__panel {
+    column-gap: 40px;
+  }
+  .header__nav {
+    column-gap: 20px;
+    flex-flow: row wrap;
+    line-height: 25px;
+    justify-content: center;
+  }
+
+  .facilities__cards {
+    row-gap: 25px;
+  }
+  .facilities__item {
+    padding: 0;
+  }
 }
 @media (max-width: 630px) {
   .main {
@@ -302,10 +396,69 @@ body {
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .facilities__header {
+    text-align: center;
+  }
+  .facilities__wrapper {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .facilities__text {
+    margin-bottom: 20px;
+  }
+  .facilities__item {
+    max-width: 50%;
+  }
+  .facilities__img {
+    margin-bottom: 20px;
+  }
+  .facilities__card-text {
+    max-width: 240px;
+  }
 }
 @media (max-width: 535px) {
   .header__nav {
     display: none;
+  }
+
+  .facilities__header {
+    font-size: 25px;
+    margin: 0 0 8px 0;
+    line-height: 30px;
+  }
+  .facilities__wrapper {
+    margin-bottom: 14px;
+  }
+  .facilities__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .facilities__cards {
+    row-gap: 15px;
+  }
+  .facilities__card-header {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .facilities__card-text {
+    font-size: 14px;
+    max-width: 180px;
+  }
+}
+@media (max-width: 420px) {
+  .facilities__item {
+    padding: 5px;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .facilities__img {
+    margin-bottom: 0;
+  }
+  .facilities__card-text {
+    max-width: 80%;
   }
 }
 @media (max-width: 320px) {
