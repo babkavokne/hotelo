@@ -247,6 +247,41 @@ body
   border: none
   padding: 16px 32px
   border-radius: 8px
+.companies
+  margin: 100px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__logo
+    width: 150px
+    height: 100px
+.testimonial
+  display: flex
+  &__img
+    border-radius: 12px 0 0 12px
+    width: 50%
+  &__content 
+    display: flex
+    width: 50%  
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background-color: #F9D15C
+    border-radius: 0 12px 12px 0
+  &__avatar
+    border-radius: 50%
+    margin-bottom: 8px
+  &__name
+    margin-bottom: 23px
+    line-height: 32px
+  &__text
+    max-width: 500px
+    font-size: 30px
+    line-height: 36px
+    font-weight: 300
+    font-style: italic
+    text-align: center
+    margin: 0 0 44px 0
 
 @media ( max-width: 1299px )
   .gallery
@@ -306,6 +341,11 @@ body
       flex-wrap: nowrap
     &__item
       flex: 0 0 25%
+  .companies
+    margin: 60px 0
+    &__logo
+      width: 130px
+      height: 70px
 @media (max-width: 968px)
   .find-hotel
     &__text
@@ -370,6 +410,11 @@ body
       padding: 0
   .description
     margin-top: 40px
+  .companies
+    margin: 20px 0
+    &__logo
+      width: 100px
+      height: 70px
 @media (max-width: 630px)
   .main
     margin-top: 20px
@@ -398,6 +443,14 @@ body
       margin-bottom: 20px
     &__card-text
       max-width: 240px
+  .companies
+    margin: 10px 0
+    flex-wrap: wrap
+    justify-content: center
+    column-gap: 20px
+    &__logo
+      width: 80px
+      height: 50px
 @media ( max-width: 535px )
   .header
     &__nav
